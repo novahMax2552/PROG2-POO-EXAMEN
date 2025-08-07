@@ -7,8 +7,5 @@ public class Moderator extends User {
         super(userId, name, email, dateOfCreation);
     }
 
-    @Override
-    public String toString() {
-        return "Moderator{}";
-    }
+
 }

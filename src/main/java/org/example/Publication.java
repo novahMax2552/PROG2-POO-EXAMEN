@@ -3,23 +3,38 @@ package org.example;
 import java.time.LocalDate;
 
 public class Publication {
+    private int id;
     private String title;
     private final User author;
     private String content;
     private LocalDate dateOfPublication;
 
-    public Publication(String title, User author, String content, LocalDate dateOfPublication) {
+    public Publication(int id, String title, User author, String content, LocalDate dateOfPublication) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.content = content;
         this.dateOfPublication = LocalDate.now();
     }
 
-    public void getPublication() {
-        System.out.println("Title: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Content: " + content);
-        System.out.println("Date of publication: " + dateOfPublication);
+    public String getTitle() {
+        return title;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public LocalDate getDateOfPublication() {
+        return dateOfPublication;
     }
 
     @Override
