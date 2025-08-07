@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Publication {
     private String title;
-    private User author;
+    private final User author;
     private String content;
     private LocalDate dateOfPublication;
 
