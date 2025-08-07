@@ -15,5 +15,20 @@ public class Publication {
         this.dateOfPublication = LocalDate.now();
     }
 
+    public void getPublication() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Content: " + content);
+        System.out.println("Date of publication: " + dateOfPublication);
+    }
 
+    @Override
+    public String toString() {
+        return "Publication{" +
+                "title='" + title + '\'' +
+                ", author=" + author +
+                ", content='" + content + '\'' +
+                ", dateOfPublication=" + dateOfPublication +
+                '}';
+    }
 }
