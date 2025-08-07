@@ -8,11 +8,4 @@ public class Administrator extends Moderator{
         super(userId, name, email, LocalDate.now());
     }
 
-    public void deleteUser (String userId){
-        if (userId == null){
-          return;
-        }
-
-
-    }
 }

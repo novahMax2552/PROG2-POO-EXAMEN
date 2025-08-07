@@ -47,13 +47,19 @@ public class Groupe {
 
     public static List<Publication> getPublications (String keyWord){
         List<Publication> publications = new ArrayList<>();
-        return publications.stream()
-                .map(Publication::getContent)
-                .collect(Collectors.toUnmodifiableList());
-
-
-
+        for (Publication publication : publications) {
+            String content = publication.getContent();
+            if (content.contains(keyWord)){
+                return publications;
+            }
+        }
+        return publications;
     }
+
+    public int countNumberOfpublications(){
+        return publications.size();
+    }
+
 
 
     public static void main(String[] args) {
