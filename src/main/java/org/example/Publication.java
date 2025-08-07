@@ -15,8 +15,5 @@ public class Publication {
         this.dateOfPublication = LocalDate.now();
     }
 
-    void createPublication() {
-        this.title = title;
-        this.content = content;
-    }
+
 }
