@@ -7,5 +7,6 @@ public class Moderator extends User {
         super(userId, name, email, dateOfCreation);
     }
 
+    public void delete
 
 }

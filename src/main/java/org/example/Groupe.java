@@ -1,13 +1,19 @@
 package org.example;
 
+import org.w3c.dom.ls.LSOutput;
+
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Groupe {
     private String name;
     private List<User> users;
     private List<Moderator> moderators;
     private List<Administrator> administrators;
+    private List<Publication> publications;
+    private List<Commentaire> commentaires;
 
     public Groupe(String name, List<User> users, List<Moderator> moderators, List<Administrator> administrators) {
         this.name = name;
@@ -27,15 +33,6 @@ public class Groupe {
     public List<User> getUsers() {
         return users;
     }
-
-    public Publication getPublication(String keyWords) {
-        if (moderators.size() > 0) {
-            for (Moderator moderator : moderators) {
-
-            }
-        }
-    }
-
     public String getUser (String userId){
         if (userId == null){
             return null;
@@ -45,7 +42,22 @@ public class Groupe {
                 return user.getName();
             }
         }
+        return null;
     }
 
+    public static List<Publication> getPublications (String keyWord){
+        List<Publication> publications = new ArrayList<>();
+        return publications.stream()
+                .map(Publication::getContent)
+                .collect(Collectors.toUnmodifiableList());
+
+
+
+    }
+
+
+    public static void main(String[] args) {
+
+    }
 
 }

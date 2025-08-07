@@ -4,9 +4,15 @@ import java.time.LocalDate;
 
 public class Administrator extends Moderator{
 
-    public Administrator(String userId, String name, String email, LocalDate dateOfCreation) {
-        super(userId, name, email, dateOfCreation);
+    public Administrator(String userId, String name, String email) {
+        super(userId, name, email, LocalDate.now());
     }
 
+    public void deleteUser (String userId){
+        if (userId == null){
+          return;
+        }
 
+
+    }
 }
