@@ -1,11 +1,7 @@
 package org.example;
 
-import org.w3c.dom.ls.LSOutput;
-
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Groupe {
     private String name;
@@ -60,6 +56,9 @@ public class Groupe {
         return publications.size();
     }
 
+    public void deletePublication(String publicationId){
+
+    }
 
 
     public static void main(String[] args) {
